@@ -1,0 +1,29 @@
+<portlet>
+	<portlet-name>portalb2bcambioPassword</portlet-name>
+	<display-name xml:lang="en">portalb2bcambioPassword
+	</display-name>
+	<display-name>portalb2bcambioPassword</display-name>
+	<portlet-class>es.elcorteingles.n0114.apl2PP.portal.cambiopassword.Portalb2badmPasswordsSimplePortlet
+	</portlet-class>
+	<init-param>
+		<name>wps.markup</name>
+		<value>html</value>
+	</init-param>
+	<expiration-cache>0</expiration-cache>
+	<supports>
+		<mime-type>text/html</mime-type>
+		<portlet-mode>view</portlet-mode>
+	</supports>
+	<supported-locale>en</supported-locale>
+	<supported-locale>es</supported-locale>
+	<supported-locale>pt</supported-locale>
+
+	<portlet-info>
+		<title>portalb2bcambioPassword</title>
+		<short-title>portalb2bcambioPassword</short-title>
+		<keywords>portalb2bcambioPassword</keywords>
+	</portlet-info>
+</portlet>
+<default-namespace>http://portalb2bcambiopassword/</default-namespace>
+
+</portlet-app>

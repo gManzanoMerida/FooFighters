@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ws.foows.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ws.foows.com" xmlns:intf="http://ws.foows.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://ws.foows.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getHi">
+    <complexType>
+     <sequence>
+      <element name="name" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHiResponse">
+    <complexType>
+     <sequence>
+      <element name="getHiReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getTerryQuotes">
+    <complexType/>
+   </element>
+   <element name="getTerryQuotesResponse">
+    <complexType>
+     <sequence>
+      <element name="getTerryQuotesReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getBye">
+    <complexType>
+     <sequence>
+      <element name="name" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getByeResponse">
+    <complexType>
+     <sequence>
+      <element name="getByeReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getHiRequest">
+
+      <wsdl:part element="impl:getHi" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHiResponse">
+
+      <wsdl:part element="impl:getHiResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getByeRequest">
+
+      <wsdl:part element="impl:getBye" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getByeResponse">
+
+      <wsdl:part element="impl:getByeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTerryQuotesRequest">
+
+      <wsdl:part element="impl:getTerryQuotes" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTerryQuotesResponse">
+
+      <wsdl:part element="impl:getTerryQuotesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="IFooWSImpl">
+
+      <wsdl:operation name="getHi">
+
+         <wsdl:input message="impl:getHiRequest" name="getHiRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getHiResponse" name="getHiResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTerryQuotes">
+
+         <wsdl:input message="impl:getTerryQuotesRequest" name="getTerryQuotesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getTerryQuotesResponse" name="getTerryQuotesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBye">
+
+         <wsdl:input message="impl:getByeRequest" name="getByeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getByeResponse" name="getByeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="IFooWSImplSoapBinding" type="impl:IFooWSImpl">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getHi">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHiRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHiResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTerryQuotes">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getTerryQuotesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getTerryQuotesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBye">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getByeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getByeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="IFooWSImplService">
+
+      <wsdl:port binding="impl:IFooWSImplSoapBinding" name="IFooWSImpl">
+
+         <wsdlsoap:address location="http://localhost:8080/FooWS/services/IFooWSImpl"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
