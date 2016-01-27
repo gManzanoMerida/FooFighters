@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+<script>
+	var reader = new FileReader();
+	function processFile(files) {
+		var file = files[0];
+		alert("Nombre fichero" + file.name);
+		reader.readAsText(file);
+	}
+	reader.onload = function(e) {
+		// When this event fires, the data is ready.
+		// Copy it to a on the page.
+		var output = document.getElementById("ficheros");
+		output.textContent = e.target.result;
+		alert("Contenido Fichero" + output.textContent);
+	};
+</script>
+</head>
+<body>
+	<input type="file" id="ficheros" onchange="processFile(this.files);" />
+</body>

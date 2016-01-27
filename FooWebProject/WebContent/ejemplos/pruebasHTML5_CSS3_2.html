@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+	border: 15px solid transparent;
+	width: 250px;
+	padding: 10px 20px;
+}
+
+#round {
+	-webkit-border-image: url(border.png) 30 30 round; /* Safari 5 */
+	-o-border-image: url(border.png) 30 30 round; /* Opera 10.5-12.1 */
+	border-image: url(border.png) 30 30 round;
+}
+
+#stretch {
+	-webkit-border-image: url(border.png) 30 30 stretch; /* Safari 5 */
+	-o-border-image: url(border.png) 30 30 stretch; /* Opera 10.5-12.1 */
+	border-image: url(border.png) 30 30 stretch;
+}
+</style>
+</head>
+<body>
+	<p>
+		<strong>Note:</strong> Se necesita Internet Explorer > 10 para
+		soportar esta propiedad
+	</p>
+	<p>Especifica una imagen que va a ser usada en un border.</p>
+	<div id="round">Here, the image is tiled (repeated) to fill the
+		area.</div>
+	<br>
+	<div id="stretch">Here, the image is stretched to fill the area.</div>
+	<p>Here is the image that is used:</p>
+	<img src="border.png">
+</body>
+</html>
+

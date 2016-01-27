@@ -1,4 +1,4 @@
-package com.gmm.fooWebProject2.test;
+package com.gmm.fooWebProject.test;
 
 public class Producto {
 
