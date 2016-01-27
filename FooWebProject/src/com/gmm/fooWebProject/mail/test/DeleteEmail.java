@@ -13,6 +13,56 @@ import javax.mail.NoSuchProviderException;
 import javax.mail.Session;
 import javax.mail.Store;
 
+/**
+ * 
+ * @author GMM
+ * 
+ *         In this chapter we will see how to delete an email using JavaMail
+ *         API. Deleting messages involves working with the Flags associated
+ *         with the messages. There are different flags for different states,
+ *         some system-defined and some user-defined. The predefined flags are
+ *         defined in the inner class Flags.Flag and are listed below:
+ * 
+ *         Flags.Flag.ANSWERED
+ * 
+ *         Flags.Flag.DELETED
+ * 
+ *         Flags.Flag.DRAFT
+ * 
+ *         Flags.Flag.FLAGGED
+ * 
+ *         Flags.Flag.RECENT
+ * 
+ *         Flags.Flag.SEEN
+ * 
+ *         Flags.Flag.USER
+ * 
+ *         POP protocol supports only deleting of the messages.
+ * 
+ *         Basic steps followed in the delete program are:
+ * 
+ *         Get the Session object with POP and SMPT server details in the
+ *         properties. We would need POP details to retrieve messages and SMPT
+ *         details to send messages.
+ * 
+ *         Create POP3 store object and connect to the store.
+ * 
+ *         Create Folder object and open the appropriate folder in your mailbox
+ *         in READ_WRITE mode.
+ * 
+ *         Retrieves messages from inbox folder.
+ * 
+ *         Iterate through the messages and type "Y" or "y" if you want to
+ *         delete the message by invoking the method setFlag(Flags.Flag.DELETED,
+ *         true) on the Message object.
+ * 
+ *         The messages marked DELETED are not actually deleted, until we call
+ *         the expunge() method on the Folder object, or close the folder with
+ *         expunge set to true.
+ * 
+ *         Close the store object.
+ *
+ */
 public class DeleteEmail {
 
    public static void delete(String pop3Host, String storeType, String user,

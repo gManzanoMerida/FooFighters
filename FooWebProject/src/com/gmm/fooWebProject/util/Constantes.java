@@ -7,17 +7,23 @@ public class Constantes {
 	
 	/////////////////////////////////7
 	// CONFIGURACIÓN JAVAMAIL
+	public static final String MAIL_TRANSPORT_PROTOCOL = "mail.transport.protocol";
 	public static final String MAIL_STORE_PROTOCOL= "mail.store.protocol";
 	public static final String INBOX = "INBOX";
 
 	// SMTP
+	public static final String SMTP = "smtp";	
 	public static final String MAIL_SMTP_HOST = "mail.smtp.host";	
 	public static final String MAIL_SMTP_STARTTLS_ENABLE = "mail.smtp.starttls.enable";	
 	public static final String MAIL_SMTP_PORT = "mail.smtp.port";	
 	public static final String MAIL_SMTP_AUTH = "mail.smtp.auth";	
 	public static final String MAIL_SMTP_USER = "mail.smtp.user";	
-	public static final String SMTP = "smtp";	
 	public static final String MAIL_SMTP_MAIL_SENDER = "mail.smtp.mail.sender";
+	public static final String MAIL_SMTP_FROM = "mail.smtp.from";
+	
+	//GMAIL SMTP
+	public static final String SMTP_GMAIL_COM = "smtp.gmail.com";
+	
 	
 	//IMAP
 	public static final String IMAPS = "imaps";
@@ -26,7 +32,6 @@ public class Constantes {
 	
 	//GMAIL IMAP
 	public static final String IMAP_GMAIL_COM = "imap.gmail.com";
-	
 	
 	
 	// POP3 

@@ -11,6 +11,40 @@ import javax.mail.Store;
 
 import com.gmm.fooWebProject.util.Constantes;
 
+/**
+ * 
+ * @author GMM There are two aspects to which needs to understood before
+ *         proceeding with this chapter. They are Check and Fetch.
+ * 
+ *         Checking an email in JavaMail is a process where we open the
+ *         respective folder in the mailbox and get each message. Here we only
+ *         check the header of each message i.e the From, To, subject. Content
+ *         is not read.
+ * 
+ *         Fetching an email in JavaMail is a process where we open the
+ *         respective folder in the mailbox and get each message. Alongwith the
+ *         header we also read the content by recognizing the content-type.
+ * 
+ *         To check or fetch an email using JavaMail API, we would need POP or
+ *         IMAP servers. To check and fetch the emails, Folder and Store classes
+ *         are needed. Here we have used GMAIL's POP3 server (pop.gmail.com). In
+ *         this chapter will learn how to check emails using JavaMail API.
+ *         Fetching shall be covered in the subsequent chapters. To check
+ *         emails:
+ * 
+ *         Get a Session
+ * 
+ *         Create pop3 Store object and connect with pop server.
+ * 
+ *         Create folder object. Open the appropriate folder in your mailbox.
+ * 
+ *         Get your messages.
+ * 
+ *         Close the Store and Folder objects.
+ *
+ * 
+ * 
+ */
 public class CheckingMails {
 
 	private static final String PASS = "Turrican__2018";

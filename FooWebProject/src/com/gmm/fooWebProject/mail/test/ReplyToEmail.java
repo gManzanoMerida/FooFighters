@@ -13,6 +13,44 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+/**
+ * 
+ * @author GMM
+ * 
+ *         In this chapter we will see how to reply to an email using JavaMail
+ *         API. Basic steps followed in the program below are:
+ * 
+ *         Get the Session object with POP and SMPT server details in the
+ *         properties. We would need POP details to retrieve messages and SMPT
+ *         details to send messages.
+ * 
+ *         Create POP3 store object and connect to the store.
+ * 
+ *         Create Folder object and open the appropriate folder in your mailbox.
+ * 
+ *         Retrieve messages.
+ * 
+ *         Iterate through the messages and type "Y" or "y" if you want to
+ *         reply.
+ * 
+ *         Get all information (To,From,Subject, Content) of the message.
+ * 
+ *         Build the reply message, using Message.reply() method. This method
+ *         configures a new Message with the proper recipient and subject. The
+ *         method takes a boolean parameter indicating whether to reply to only
+ *         the sender (false) or reply to all (true).
+ * 
+ *         Set From,Text and Reply-to in the message and send it through the
+ *         instance of Transport object.
+ * 
+ *         Close the Transport, folder and store objects respectively.
+ * 
+ *         Here we have used JangoSMPT server via which emails are sent to our
+ *         destination email address. The setup is explained in the Environment
+ *         Setup chapter.
+ *
+ * 
+ */
 public class ReplyToEmail {
 
 	private static String USER = "g.manzano.merida@gmail.com";

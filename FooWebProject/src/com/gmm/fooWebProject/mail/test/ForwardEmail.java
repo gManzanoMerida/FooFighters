@@ -20,6 +20,42 @@ import javax.mail.internet.MimeMultipart;
 
 import com.gmm.fooWebProject.util.Constantes;
 
+/**
+ * 
+ * @author GMM
+ * 
+ *         In this chapter we will see how to forward an email using JavaMail
+ *         API. Basic steps followed in the program below are:
+ * 
+ *         Get the Session object with POP and SMPT server details in the
+ *         properties. We would need POP details to retrieve messages and SMPT
+ *         details to send messages.
+ * 
+ *         Create POP3 store object and connect to the store.
+ * 
+ *         Create Folder object and open the appropriate folder in your mailbox.
+ * 
+ *         Retrieve messages.
+ * 
+ *         Iterate through the messages and type "Y" or "y" if you want to
+ *         forward.
+ * 
+ *         Get all information (To,From,Subject, Content) of the message.
+ * 
+ *         Build the forward message by working with the parts that make up a
+ *         message. First part would be the text of the message and a second
+ *         part would be the message to forward. Combine the two into a
+ *         multipart. Then you add the multipart to a properly addressed message
+ *         and send it.
+ * 
+ *         Close the Transport, folder and store objects respectively.
+ * 
+ *         Here we have used JangoSMPT server via which emails are sent to our
+ *         destination email address. The setup is explained in the Environment
+ *         Setup chapter.
+ *
+ * 
+ */
 public class ForwardEmail {
 
    public static void main(String[] args) {

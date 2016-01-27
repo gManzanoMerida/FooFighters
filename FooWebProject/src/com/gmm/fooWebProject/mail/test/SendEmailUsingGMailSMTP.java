@@ -10,6 +10,26 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+/**
+ * 
+ * @author GMM
+ * 
+ *         In all previous chapters we used JangoSMPT server to send emails. In
+ *         this chapter we will learn about SMPT server provided by Gmail. Gmail
+ *         (among others) offers use of their public SMTP server free of charge.
+ * 
+ *         Gmail SMTP server details can be found here. As you can see in the
+ *         details, we can use either TLS or SSL connection to send email via
+ *         Gmail SMTP server.
+ * 
+ *         The procedure to send email using Gmail SMTP server is similar as
+ *         explained in chapter Sending Emails, except that we would change the
+ *         host server. As a pre-requisite the sender email address should be an
+ *         active gmail account. Let us try an example.
+ *
+ * 
+ * 
+ */
 public class SendEmailUsingGMailSMTP {
 	public static void main(String[] args) {
 		// Recipient's email ID needs to be mentioned.
