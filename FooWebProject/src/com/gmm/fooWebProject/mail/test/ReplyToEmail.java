@@ -54,7 +54,7 @@ import javax.mail.internet.MimeMessage;
 public class ReplyToEmail {
 
 	private static String USER = "g.manzano.merida@gmail.com";
-	private static String PASS = "Turrican__2018";
+	private static String PASS = "";
 
 	public static void main(String args[]) {
 		Date date = null;

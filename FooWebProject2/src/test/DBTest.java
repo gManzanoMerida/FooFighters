@@ -1,6 +1,7 @@
 package test;
 
-import com.gmm.fooWebProject2.dao.JDBCUserDAO;
+import com.gmm.fooWebProject2.dao.DBConnection;
+import com.gmm.fooWebProject2.dao.UserDAO;
 import com.gmm.fooWebProject2.user.User;
 
 public class DBTest {
@@ -8,18 +9,17 @@ public class DBTest {
 	public static void main(String[] args) {
 
 		User user = new User();
-		user.setName("GMM");
+		user.setName("AMM");
 
-		JDBCUserDAO jdbcUserDAO = new JDBCUserDAO();
-		jdbcUserDAO.getConnection();
-		jdbcUserDAO.insert(user);
+		 
+		UserDAO dao = new UserDAO();
+		dao.insert(user);
 
-		user.setName("Another Name");
+		user.setName("SMJ");
 
-		jdbcUserDAO.insert(user);
-
-		jdbcUserDAO.select();
-		jdbcUserDAO.closeConnection();
+		dao.insert(user); 
+		
+		DBConnection.closeConnection();
 	}
 
 }

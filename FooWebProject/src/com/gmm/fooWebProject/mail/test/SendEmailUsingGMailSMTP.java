@@ -38,7 +38,7 @@ public class SendEmailUsingGMailSMTP {
 		// Sender's email ID needs to be mentioned
 		String from = "g.manzano.merida@gmail.com"; 
 		final String username = "g.manzano.merida@gmail.com"; 																 
-		final String password = "Turrican__2018";
+		final String password = "";
 
 		// Assuming you are sending email through relay.jangosmtp.net
 		String host = "smtp.gmail.com";

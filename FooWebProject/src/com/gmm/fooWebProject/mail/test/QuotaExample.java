@@ -55,7 +55,7 @@ public class QuotaExample {
 	public static void main(String[] args) {
 		
 		final String username = "g.manzano.merida@gmail.com"; 																 
-		final String password = "Turrican__2018";
+		final String password = "";
 
 		
 		try {

@@ -4,6 +4,32 @@ public class Constantes {
 	
 	public static final String TRUE = "true";
 	
+	/**
+ 	 * Constantes manejo de strings.
+ 	 */
+ 	public static final String EMPTY_STR="";
+ 	public static final String LITERAL_0 = "0";
+ 	public static final String LITERAL_1="1";
+ 	public static final String DELIMITER = "#";
+ 	public static final String STR_SPACE=" ";
+	public static final String COMILLA = "'";
+	public static final String ABRE_PARENTESIS = "(";
+	public static final String COMA = ",";
+	public static final String CIERRA_PARENTESIS = null;
+	public static final String SET = "SET";
+	public static final String  PUNTOS = ":";
+	
+	public static final String VPR_APLIC_ID="VPR";
+	public static final String CINCO_CEROS="00000";
+	public static final String DEST_STERLING="STERLING";
+	public static final String MSGTYPE_VPR="INV04";
+	public static final String CENTRO_PROV="PROV";
+ 	
+ 	/**
+ 	 * Fichero de properties
+ 	 */
+ 	public static final String PROPERTIES_NAME = "sendAdjustmentsSynchronizer";
+	
 	
 	/////////////////////////////////7
 	// CONFIGURACIÓN JAVAMAIL
@@ -43,9 +69,32 @@ public class Constantes {
 	
 	// GMAIL POP3
 	public static final String POP_GMAIL_COM = "pop.gmail.com";
-	
-	
+
 	//
 	///////////////////////////////////////
+	
+	
+	//////////////////////////////////////////////
+	// BASES DE DATOS
+	/**
+ 	 * Constantes acceso DB2
+ 	 * 
+ 	 */
+	public static final String PROP_DB2_URL = "db2.connection.url";
+	public static final String PROP_DB2_USERNAME = "db2.connection.username";
+	public static final String PROP_DB2_PWD = "db2.connection.password";
+	public static final String PROP_DB2_DRIVER="COM.ibm.db2os390.sqlj.jdbc.DB2SQLJDriver";
+	
+	public static final String FLD_XBATCACT="XBATCACT";
+	public static final String CEMPRESA_ECI="001";
+	
+	/**
+ 	 * Constantes acceso Oracle
+ 	 * 
+ 	 */
+	public static final String PROP_ORACLE_URL = "oracle.connection.url";
+	public static final String PROP_ORACLE_USERNAME = "oracle.connection.username";
+	public static final String PROP_ORACLE_PWD = "oracle.connection.password";
+	public static final String PROP_ORACLE_DRIVER="oracle.jdbc.driver.OracleDriver";
 
 }

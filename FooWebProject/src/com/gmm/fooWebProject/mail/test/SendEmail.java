@@ -44,7 +44,7 @@ public static void main(String[] args) throws Exception {
       String smtpServer = Constantes.SMTP_GMAIL_COM;
       int port = 587;
       final String userid = "g.manzano.merida@gmail.com"; 
-      final String password = "Turrican__2018"; 
+      final String password = ""; 
       String contentType = "text/html";
       String subject = "test: bounce an email to a different address  from the sender";
       String from = "g.manzano.merida@gmail.com";

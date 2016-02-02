@@ -47,7 +47,7 @@ import com.gmm.fooWebProject.util.Constantes;
  */
 public class CheckingMails {
 
-	private static final String PASS = "Turrican__2018";
+	private static final String PASS = "";
 	private static final String USER = "g.manzano.merida@gmail.com";
 	
 

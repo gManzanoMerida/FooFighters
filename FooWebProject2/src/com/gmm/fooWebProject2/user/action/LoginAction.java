@@ -9,7 +9,7 @@ import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.convention.annotation.ResultPath;
 import org.apache.struts2.convention.annotation.Results;
 
-import com.gmm.fooWebProject2.dao.JDBCUserDAO;
+import com.gmm.fooWebProject2.dao.UserDAO;
 import com.gmm.fooWebProject2.user.User;
 import com.gmm.fooWebProject2.util.Constantes;
 import com.opensymphony.xwork2.ActionContext;
@@ -79,24 +79,16 @@ public class LoginAction extends ActionSupport{
 
 			////////////////////
 			//Try loggin
-			JDBCUserDAO dao = new JDBCUserDAO();
-			dao.getConnection();
-			if (dao.getConnection() != null) {
-				boolean ok = dao.exist(user);
+			UserDAO dao = new UserDAO();
+			boolean ok = dao.exist(user);
 
-				if (ok) {
-					setUserNoEncontrado("");
-				} else {
-					setUserNoEncontrado("true");
-					setMensaje("Usuario no encontrado.");
-					result = ERROR;
-				}
-
-				dao.closeConnection();
+			if (ok) {
+				setUserNoEncontrado("");
 			} else {
-				setMensaje("Error de conexión");
+				setUserNoEncontrado("true");
+				setMensaje("Usuario no encontrado.");
 				result = ERROR;
-			}
+			}  
 
 		/////////////////////77
 		// Sesion creada
