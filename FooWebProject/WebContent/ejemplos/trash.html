@@ -1,18 +1,23 @@
-<!DOCTYPE html>
 <html>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <head>
+<title>The jQuery Example</title>
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script type="text/javascript">
- // alert("Hola Mundo!");
+	$(document).ready(function() {
+		$("p").css("color", "red");
+		$("p").css("background-color", "yellow");
+	});
 </script>
 
-<script type="text/javascript" src="./jquery-1.12.0.min.js">
- $(document).ready (function () {
-  alert ("Mi primer ejemplo:");
- });
- </script>
 </head>
+
 <body>
+	<p>Letra en rojo (color) y luego fondo amarillo (background-color) </p>
+	<p>Letra en rojo (color) y luego fondo amarillo (background-color) </p>
+	<p>Letra en rojo (color) y luego fondo amarillo (background-color) </p>
+
 </body>
+
 </html>

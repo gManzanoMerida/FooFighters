@@ -5,6 +5,21 @@ public class Constantes {
 	public static final String TRUE = "true";
 	
 	/**
+	 * Patrones de fechas
+	 */
+	public static final String YYYY_MM_DD_T_HH_MM_SS_SSSZ = "yyyy-MM-dd'T'HH:mm:ss.SSSZ";
+	public static final String YY_M_MDD_H_HMMSS_Z = "yyMMddHHmmssZ";
+	public static final String EEE_D_MMM_YYYY_HH_MM_SS_Z = "EEE, d MMM yyyy HH:mm:ss Z";
+	public static final String YYYYY_MMMMM_DD_GGG_HH_MM_AAA = "yyyyy.MMMMM.dd GGG hh:mm aaa";
+	public static final String K_MM_A_Z = "K:mm a, z";
+	public static final String HH_O_CLOCK_A_ZZZZ = "hh 'o''clock' a, zzzz";
+	public static final String H_MM_A = "h:mm a";
+	public static final String EEE_MMM_D_YY = "EEE, MMM d, ''yy";
+	public static final String YYYY_MM_DD_G_AT_HH_MM_SS_Z = "yyyy.MM.dd G 'at' HH:mm:ss z";
+	public static final String DD_MM_YYYY = "dd/MM/yyyy";
+	public static final String HH_MM_SS = "HH:mm:ss";
+	
+	/**
  	 * Constantes manejo de strings.
  	 */
  	public static final String EMPTY_STR="";
@@ -96,5 +111,7 @@ public class Constantes {
 	public static final String PROP_ORACLE_USERNAME = "oracle.connection.username";
 	public static final String PROP_ORACLE_PWD = "oracle.connection.password";
 	public static final String PROP_ORACLE_DRIVER="oracle.jdbc.driver.OracleDriver";
+
+	public static final String RUTA_LOGS = "/logs";
 
 }
