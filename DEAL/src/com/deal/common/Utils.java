@@ -40,23 +40,23 @@ import com.deal.datasource.DBConnection;
 import org.apache.http.message.BasicNameValuePair;
 
 /**
- * @author Gabriel Manzano Mérida 2015
+ * @author Gabriel Manzano Merida 2015
  *
  */
 public class Utils {
 
 //	private final static String tag = "Utils";
 	
-	public final static long MILLSECS_PER_DAY = 24 * 60 * 60 * 1000; //Milisegundos al día 
+	public final static long MILLSECS_PER_DAY = 24 * 60 * 60 * 1000; //Milisegundos al dÃ­a 
 	final static long DESDE = 1420070400000L;
 	
 	private static final int g_filas_DSPFIL = 50;
 
 	public static final int DECIMALES = 2;
 
-	public static String archivo_config = "com.bq.struts.ApplicationResource";
-	public static String archivo_es     = "com.bq.struts.ApplicationResource";
-	public static String archivo_en     = "com.bq.struts.ApplicationResource";
+	public static String archivo_config = "main.resources.ApplicationResource";
+	public static String archivo_es     = "main.resources.ApplicationResource";
+	public static String archivo_en     = "main.resources.ApplicationResource";
 	
 	private static String m_modoEjecucion;
 
@@ -97,7 +97,7 @@ public class Utils {
 		///////////////////////////////////////////////////
 		if ( usr == null || usr.trim().length() < 1 || pgm == null || pgm.trim().length() < 1 ) return resultado;
 		///////////////////////////////////////
-		// ..acceso a BD para comprobar si el usuario contempla la acción...
+		// ..acceso a BD para comprobar si el usuario contempla la acciÃ³n...
 
 		// Ejemplo:
 		//        com.sl.se_SeguridadUsuarioProgramas.db.SeAccesoBaseDatos db = new com.hh.se_SeguridadUsuarioProgramas.db.SeAccesoBaseDatos();
@@ -113,9 +113,9 @@ public class Utils {
 	}
 	public void Autenticacion_FS() {
 		/////////////////////////////////////////
-		// En OR: 2012/05/25 Se sospecha que ésto provoca "cuelgues" e impide el resto del proceso.
-		// La solución ha sido incluirlo en un servlet de "startup". 
-		// Por ejemplo, así quedaría en el "web.xml" con orden de inicio '0':
+		// En OR: 2012/05/25 Se sospecha que Ã©sto provoca "cuelgues" e impide el resto del proceso.
+		// La soluciÃ³n ha sido incluirlo en un servlet de "startup". 
+		// Por ejemplo, asÃ­ quedarÃ­a en el "web.xml" con orden de inicio '0':
 		
 //    <servlet>
 //        <servlet-name>atmStartUp</servlet-name>
@@ -127,7 +127,7 @@ public class Utils {
 //        <url-pattern>/atmStartUp</url-pattern>
 //    </servlet-mapping>
 	
-	// Y en el método "init()" del sevlet referido, se incluye la llamada:
+	// Y en el mÃ©todo "init()" del sevlet referido, se incluye la llamada:
 		
 //	public void init() {
 //		try { super.init(); } catch (ServletException ex) { ex.printStackTrace(); }
@@ -166,7 +166,7 @@ public class Utils {
 	public String logonRecursoRedWindows_sincro(String camino, String usuario, String password) throws IOException, InterruptedException {
 
 		/////////////////////////////////////////
-		// En OR: 2012/05/25 Se sospecha que ésto provoca "cuelgues" e impide el resto del proceso.
+		// En OR: 2012/05/25 Se sospecha que Ã©sto provoca "cuelgues" e impide el resto del proceso.
 		// Ver nota en 'Autenticacion_FS()'...
 		/////////////////////////////////////////
 
@@ -635,19 +635,19 @@ public class Utils {
 	
 
 	public static String neutralizarCaracteresEspeciales(String inOut) {
-	    // La representación o descomposición canónica consiste en la descomposición del carácter en 2 partes:
+	    // La representaciÃ³n o descomposiciÃ³n canÃ³nica consiste en la descomposiciÃ³n del carÃ¡cter en 2 partes:
 		//- Parte 1: Letra base
 		//- Parte 2: Acento
-		// Descomposición canónica
+		// DescomposiciÃ³n canÃ³nica
 	    inOut = Normalizer.normalize(inOut, Normalizer.Form.NFD);
-	    // Nos quedamos únicamente con los caracteres ASCII
+	    // Nos quedamos Ãºnicamente con los caracteres ASCII
 	    Pattern pattern = Pattern.compile("\\P{ASCII}+");
 	    inOut = pattern.matcher(inOut).replaceAll(""); 
 	    pattern = null;
 	    return inOut;
 	}
 	public static String neutralizarCaracteresEspeciales_bis(String inOut) {
-	    String original = "áàäéèëíìïóòöúùüñÁÀÄÉÈËÍÌÏÓÒÖÚÙÜÑçÇ";
+	    String original = "Ã¡Ã Ã¤Ã©Ã¨Ã«Ã­Ã¬Ã¯Ã³Ã²Ã¶ÃºÃ¹Ã¼Ã±Ã�Ã€Ã„Ã‰ÃˆÃ‹Ã�ÃŒÃ�Ã“Ã’Ã–ÃšÃ™ÃœÃ‘Ã§Ã‡";
 	    String ascii    = "aaaeeeiiiooouuunAAAEEEIIIOOOUUUNcC";
 	    for (int i=0; i<original.length(); i++) {
 	        inOut = inOut.replace(original.charAt(i),ascii.charAt(i));
@@ -1018,13 +1018,13 @@ public class Utils {
 	
 	/**
 	 * Siendo cada valor:
-	 *        nLazos       // Número de LAZOS registrados en BD.
-	 *        nFiles      // Número de FICHEROS de cualquier tipo dependientes de los LAZOS anteriores incluyendo PDFs.
-	 *        nBytes       // Número de BYTES que ocupan todos los ficheros dependientes de los LAZOS anteriores.
-	 *        nPDFs       // Número de PDFs dependientes de los LAZOS anteriores.
-	 *        nPDFBytes    // Número de BYTES que ocupan todos los ficheros PDF dependientes de los LAZOS anteriores.
-	 *        nNegocios    // Número de NEGOCIOS registrados.
-	 *        nUsuarios    // Número de USUARIOS registrados.
+	 *        nLazos       // NÃºmero de LAZOS registrados en BD.
+	 *        nFiles      // NÃºmero de FICHEROS de cualquier tipo dependientes de los LAZOS anteriores incluyendo PDFs.
+	 *        nBytes       // NÃºmero de BYTES que ocupan todos los ficheros dependientes de los LAZOS anteriores.
+	 *        nPDFs       // NÃºmero de PDFs dependientes de los LAZOS anteriores.
+	 *        nPDFBytes    // NÃºmero de BYTES que ocupan todos los ficheros PDF dependientes de los LAZOS anteriores.
+	 *        nNegocios    // NÃºmero de NEGOCIOS registrados.
+	 *        nUsuarios    // NÃºmero de USUARIOS registrados.
 	 *        
 	 * Llamada: https://www.billin.net/meServlet?ACC=GETALM
 	 * 
