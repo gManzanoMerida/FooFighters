@@ -10,10 +10,11 @@ import com.peregrinfalcon.dao.UserDAO;
 import com.peregrinfalcon.dto.User;
 
 @Namespace("/user")
-@Action("/login")
 @ResultPath(value="/")
-@Result(name="success",location="login.jsp")
-public class LoginAction extends ActionSupport{
+//@Action("/login2",  results={@Result(name="success",location="result.jsp"),
+//		@Result(name="error",location="error.jsp")})
+@Result(name="success",location="login2.jsp") 
+public class LoginAction2 extends ActionSupport{
 	/**
 	 * 
 	 */
@@ -21,19 +22,7 @@ public class LoginAction extends ActionSupport{
 	private String userName;
 	private String pwd;
 
-	private String mensaje;
-
 	public String execute() { 
-		this.setMensaje("SUCCESS");
 	    return SUCCESS;
-	}
-	
-	
-	public void setMensaje(String mensaje) {
-		this.mensaje = mensaje;
-	}
-
-	public String getMensaje() {
-		return mensaje;
 	}
 }
